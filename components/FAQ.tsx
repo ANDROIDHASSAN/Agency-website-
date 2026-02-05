@@ -36,7 +36,7 @@ const FAQItem: React.FC<{ question: string; answer: string }> = ({ question, ans
 };
 
 const FAQ: React.FC = () => {
-  const faqs = [
+  const DEFAULT_FAQS = [
     {
       question: "How can AI automation help my business?",
       answer: "AI automation streamlines repetitive tasks like data entry, scheduling, and lead generation, allowing your team to focus on high-value creative work. It typically saves businesses 15-25 hours per employee per week."
@@ -58,6 +58,8 @@ const FAQ: React.FC = () => {
       answer: "Starter plans include standard email support. Professional and Enterprise clients receive dedicated account managers, priority 24/7 slack support, and monthly strategy calls."
     }
   ];
+
+  const faqs = DEFAULT_FAQS;
 
   return (
     <section className="py-32 px-6">

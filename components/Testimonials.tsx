@@ -5,7 +5,7 @@ import { TestimonialsSection } from '@/components/ui/testimonials-with-marquee';
 import { Star } from 'lucide-react';
 
 const Testimonials: React.FC = () => {
-  const reviews = [
+  const DEFAULT_REVIEWS = [
     {
       name: "James Carter",
       role: "CEO",
@@ -49,6 +49,8 @@ const Testimonials: React.FC = () => {
       avatar: "https://picsum.photos/100/100?random=15"
     }
   ];
+
+  const reviews = DEFAULT_REVIEWS;
 
   return (
     <section className="py-32 px-6 bg-white/[0.01]">

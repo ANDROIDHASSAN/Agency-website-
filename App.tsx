@@ -42,21 +42,21 @@ const App: React.FC = () => {
               <Navbar />
               <main>
                 <Hero />
-                <div id="services">
+                <section id="services">
                   <Services />
-                </div>
-                <div id="process">
+                </section>
+                <section id="process">
                   <Process />
-                </div>
-                <div id="cases">
+                </section>
+                <section id="cases">
                   <CaseStudies />
-                </div>
-                <div id="benefits">
+                </section>
+                <section id="benefits">
                   <Benefits />
-                </div>
-                <div id="pricing">
+                </section>
+                <section id="pricing">
                   <Pricing />
-                </div>
+                </section>
                 <Testimonials />
                 <FAQ />
               </main>

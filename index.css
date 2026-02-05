@@ -1,10 +1,11 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
 
 @layer base {
   :root {
-    --primary: #6366F1;
-    --primary-light: #818CF8;
-    --secondary: #10B981;
+    --primary: #1E40AF;
+    --primary-light: #3B82F6;
+    --secondary: #22C55E;
     --background: #000000;
     --foreground: #ffffff;
     --text-muted: rgba(255, 255, 255, 0.6);
@@ -27,10 +28,24 @@
   }
 
   body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     background-color: var(--background);
     color: var(--foreground);
     overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  /* Prevent sticky header occlusion */
+  section[id] {
+    scroll-margin-top: 100px;
   }
 
   html.lenis,
@@ -156,6 +171,7 @@
 .cursor-pointer-interactive {
   cursor: pointer;
 }
+
 /* Chat Bot Card Styles */
 .container_chat_bot {
   display: flex;
@@ -167,14 +183,12 @@
 .container_chat_bot .container-chat-options {
   position: relative;
   display: flex;
-  background: linear-gradient(
-    to bottom right,
-    #7e7e7e,
-    #363636,
-    #363636,
-    #363636,
-    #363636
-  );
+  background: linear-gradient(to bottom right,
+      #7e7e7e,
+      #363636,
+      #363636,
+      #363636,
+      #363636);
   border-radius: 16px;
   padding: 1.5px;
   overflow: hidden;
@@ -185,16 +199,14 @@
   content: "";
   top: -10px;
   left: -10px;
-  background: radial-gradient(
-    ellipse at center,
-    #ffffff,
-    rgba(255, 255, 255, 0.3),
-    rgba(255, 255, 255, 0.1),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0)
-  );
+  background: radial-gradient(ellipse at center,
+      #ffffff,
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0.1),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0));
   width: 30px;
   height: 30px;
   filter: blur(1px);

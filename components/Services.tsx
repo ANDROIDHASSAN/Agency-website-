@@ -10,7 +10,7 @@ const Services: React.FC = () => {
   const headerRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<HTMLUListElement>(null);
 
-  const services = [
+  const DEFAULT_SERVICES = [
     {
       title: "Digital Marketing",
       description: "Data-driven Meta ads, Google Business Profile dominance, and automated WhatsApp messaging to skyrocket your reach.",
@@ -40,6 +40,8 @@ const Services: React.FC = () => {
       highlights: ["SaaS Build", "MVP", "Scaling"]
     }
   ];
+
+  const services = DEFAULT_SERVICES;
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {

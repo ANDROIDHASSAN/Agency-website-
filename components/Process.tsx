@@ -11,7 +11,7 @@ const Process: React.FC = () => {
   const leftContentRef = useRef<HTMLDivElement>(null);
   const stepsContainerRef = useRef<HTMLDivElement>(null);
 
-  const steps = [
+  const DEFAULT_STEPS = [
     {
       id: "01",
       title: "Discovery & Analysis",
@@ -37,6 +37,8 @@ const Process: React.FC = () => {
       icon: <Rocket className="w-6 h-6" />
     }
   ];
+
+  const steps = DEFAULT_STEPS;
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {

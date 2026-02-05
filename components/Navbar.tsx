@@ -20,13 +20,18 @@ const Navbar: React.FC = () => {
         </div>
 
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-white/70">
-          {['Services', 'Solutions', 'About', 'Contact'].map((item) => (
+          {[
+            { name: 'Services', href: '#services' },
+            { name: 'Process', href: '#process' },
+            { name: 'Work', href: '#cases' },
+            { name: 'Pricing', href: '#pricing' },
+          ].map((item) => (
             <a
-              key={item}
-              href={`#${item.toLowerCase().replace(' ', '-')}`}
+              key={item.name}
+              href={item.href}
               className="hover:text-white transition-colors duration-200 cursor-pointer focus-visible:text-white focus-visible:outline-none"
             >
-              {item}
+              {item.name}
             </a>
           ))}
         </div>
@@ -35,9 +40,9 @@ const Navbar: React.FC = () => {
           <button className="hidden sm:block text-sm font-medium text-white/70 hover:text-white transition-colors duration-200 cursor-pointer">
             Login
           </button>
-          <ShimmerButton className="text-sm font-bold shadow-lg hover:shadow-indigo-500/25">
+          <ShimmerButton className="text-sm font-bold shadow-lg hover:shadow-indigo-500/25 px-8">
             Get Started
-            <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200 ml-1" />
+            <ChevronRight className="w-4 h-4 transition-transform duration-200 ml-2" />
           </ShimmerButton>
         </div>
       </div>

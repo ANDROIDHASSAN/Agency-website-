@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { ExternalLink, TrendingUp, Clock, Target } from 'lucide-react';
 
 const CaseStudies: React.FC = () => {
-  const studies = [
+  const DEFAULT_STUDIES = [
     {
       title: "40% Less Inventory Waste",
       company: "TrailForge",
@@ -28,6 +28,8 @@ const CaseStudies: React.FC = () => {
     }
   ];
 
+  const studies = DEFAULT_STUDIES;
+
   return (
     <section className="py-32 overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 mb-16">
@@ -48,6 +50,9 @@ const CaseStudies: React.FC = () => {
               <img
                 src={study.image}
                 alt={study.title}
+                onError={(e) => {
+                  (e.target as HTMLImageElement).src = `https://placehold.co/600x400/000000/FFFFFF?text=${encodeURIComponent(study.company)}`;
+                }}
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
@@ -67,8 +72,8 @@ const CaseStudies: React.FC = () => {
                   </span>
                 ))}
               </div>
-              <button className="text-sm font-bold text-indigo-400 flex items-center gap-2 group-hover:text-indigo-300">
-                Read full case study
+              <button className="text-sm font-bold text-primary flex items-center gap-2 group-hover:text-primary-light transition-colors">
+                View Case Study
                 <ExternalLink className="w-4 h-4" />
               </button>
             </div>

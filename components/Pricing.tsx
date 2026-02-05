@@ -8,7 +8,7 @@ import { Check, Zap } from 'lucide-react';
 const Pricing: React.FC = () => {
   const [isAnnual, setIsAnnual] = useState(true);
 
-  const plans = [
+  const DEFAULT_PLANS = [
     {
       name: "Starter",
       price: isAnnual ? "37" : "49",
@@ -30,6 +30,8 @@ const Pricing: React.FC = () => {
     }
   ];
 
+  const plans = DEFAULT_PLANS;
+
   return (
     <section className="py-32 px-6">
       <div className="max-w-6xl mx-auto text-center">
@@ -39,14 +41,14 @@ const Pricing: React.FC = () => {
             <span className={`text-sm font-medium ${!isAnnual ? 'text-white' : 'text-white/40'}`}>Monthly</span>
             <button
               onClick={() => setIsAnnual(!isAnnual)}
-              className="w-14 h-7 bg-white/10 rounded-full relative p-1 transition-colors"
+              className="w-14 h-7 bg-white/5 border border-white/10 rounded-full relative p-1 transition-colors"
             >
               <motion.div
                 animate={{ x: isAnnual ? 28 : 0 }}
-                className="w-5 h-5 bg-indigo-500 rounded-full"
+                className="w-5 h-5 bg-primary rounded-full shadow-lg"
               />
             </button>
-            <span className={`text-sm font-medium ${isAnnual ? 'text-white' : 'text-white/40'}`}>Annually <span className="text-emerald-400 text-[10px] ml-1">SAVE 25%</span></span>
+            <span className={`text-sm font-medium ${isAnnual ? 'text-white' : 'text-white/40'}`}>Annually <span className="text-secondary text-[10px] ml-1">SAVE 25%</span></span>
           </div>
         </div>
 
@@ -66,9 +68,9 @@ const Pricing: React.FC = () => {
                   borderWidth={3}
                   variant={plan.isPopular ? "default" : "default"}
                 />
-                <div className={`relative flex flex-col h-full overflow-hidden rounded-[1.5rem] border-[0.75px] ${plan.isPopular ? 'border-indigo-500/20 bg-indigo-950/20' : 'border-white/10 bg-black/50'} p-8 shadow-sm dark:shadow-[0px_0px_27px_0px_rgba(45,45,45,0.3)] backdrop-blur-md`}>
+                <div className={`relative flex flex-col h-full overflow-hidden rounded-[1.5rem] border-[0.75px] ${plan.isPopular ? 'border-primary/20 bg-primary/10' : 'border-white/10 bg-black/50'} p-8 shadow-sm dark:shadow-[0px_0px_27px_0px_rgba(45,45,45,0.3)] backdrop-blur-md pt-12`}>
                   {plan.isPopular && (
-                    <div className="absolute top-0 left-1/2 -translate-x-1/2 bg-indigo-500 text-white text-[10px] font-bold px-3 py-1 rounded-b-lg uppercase tracking-widest z-10">
+                    <div className="absolute top-0 left-0 right-0 bg-primary text-white text-[10px] font-bold py-1.5 text-center uppercase tracking-widest z-10">
                       Most Popular
                     </div>
                   )}

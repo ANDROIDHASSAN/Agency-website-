@@ -28,57 +28,20 @@ export function TestimonialsSection({
     const trackRef = useRef<HTMLDivElement>(null);
 
     // Create a looped array of testimonials for the marquee effect
-    // We confirm we need enough items to fill the screen and loop smoothly
-    const loopedTestimonials = [...testimonials, ...testimonials, ...testimonials, ...testimonials];
+    // Two sets are enough for a seamless loop with the xPercent method
+    const loopedTestimonials = [...testimonials, ...testimonials];
 
     useLayoutEffect(() => {
         const ctx = gsap.context(() => {
             const track = trackRef.current;
             if (!track) return;
 
-            // Simple infinite marquee
-            // We animate the track to the left. 
-            // Since we don't know the exact pixel width easily without calculation, 
-            // and we want it seamless, a common trick is to animate xPercent if we know the structure, 
-            // or just animate 'x' by half the total scrollWidth if we duplicated it exactly once.
-            // Here we duplicated 4 times. Let's try a logic that moves by the width of one set of testimonials.
-
-            // However, a simpler approach for a "dumb" marquee is just to use CSS animation or a simple GSAP tween
-            // that moves until the first item completely leaves and then resets, which requires precise calculation.
-
-            // Let's use the 'xPercent' method which is robust for marquees.
-            // If we have content X X X X, and we move to -50%, we are at the middle.
-
-            // Let's calculate the width of a single set of items to determine the loop point.
-            // But getting exact width can be tricky with layout thrashing.
-
-            // Alternative: Simply animate to x: "-=1000" (arbitrary) is bad.
-
-            // Best standard GSAP marquee:
-            // 1. Calculate width of *original* content.
-            // 2. Animate 'x' from 0 to -originalWidth.
-            // 3. Modifiers or repeat.
-
-            // To be safe and quick, I will just assume the track is very long and animate it slowly.
-            // Actually, the previous implementation calculated 'scrollAmount'.
-
-            // Let's use a time-based animation.
-
             const totalWidth = track.scrollWidth;
-            // We have 4 sets. We want to move by 1 set's width, then reset? 
-            // No, the simplest seamless loop is:
-            // content: [A B C] [A B C]
-            // Animate x from 0 to -width(A B C).
-            // When it reaches -width(A B C), reset to 0 immediately.
-
-            // Since we duplicated 4 times.
-            // The single set width is roughly totalWidth / 4.
-
-            const setWidth = totalWidth / 4;
+            const setWidth = totalWidth / 2;
 
             gsap.to(track, {
                 x: -setWidth,
-                duration: 20, // Adjust speed here
+                duration: 30, // Slower, more professional speed
                 ease: "none",
                 repeat: -1,
             });
@@ -93,13 +56,13 @@ export function TestimonialsSection({
             ref={sectionRef}
             className={cn(
                 "bg-transparent text-foreground",
-                "py-12 px-0 overflow-hidden relative", // Added relative
+                "py-12 px-0 overflow-hidden relative",
                 className
             )}
         >
             <div className="mx-auto flex max-w-container flex-col items-center gap-4 text-center">
                 <div className="flex flex-col items-center gap-4 px-4 mb-16">
-                    <h2 className="text-lg font-bold uppercase tracking-widest text-indigo-400">
+                    <h2 className="text-lg font-bold uppercase tracking-widest text-primary">
                         {title}
                     </h2>
                     {description && (
