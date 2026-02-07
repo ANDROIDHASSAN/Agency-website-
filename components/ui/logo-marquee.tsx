@@ -35,7 +35,8 @@ export function LogoMarquee({
                                 {item.logo ? (
                                     <img src={item.logo} alt={item.name} className="h-6 w-auto grayscale opacity-50 group-hover/item:opacity-100 group-hover/item:grayscale-0 transition-all duration-300" />
                                 ) : (
-                                    <span className="text-xl font-black tracking-tighter text-white/30 group-hover/item:text-indigo-400 transition-colors duration-300">
+                                    <span className="text-xl font-black tracking-tighter text-white/30 group-hover/item:text-blue-400 transition-colors duration-300">
+
                                         {item.name}
                                     </span>
                                 )}
@@ -53,7 +54,8 @@ export function LogoMarquee({
                                 {item.logo ? (
                                     <img src={item.logo} alt={item.name} className="h-6 w-auto grayscale opacity-50 group-hover/item:opacity-100 group-hover/item:grayscale-0 transition-all duration-300" />
                                 ) : (
-                                    <span className="text-xl font-black tracking-tighter text-white/30 group-hover/item:text-indigo-400 transition-colors duration-300">
+                                    <span className="text-xl font-black tracking-tighter text-white/30 group-hover/item:text-blue-400 transition-colors duration-300">
+
                                         {item.name}
                                     </span>
                                 )}

@@ -1,4 +1,4 @@
-# XTRACT Design System (AI-Native Blue)
+# TECH MANTRIX Design System (AI-Native Blue)
 
 ## Core Philosophy
 - **Style:** AI-Native UI (Ambient, Intelligent, Responsive)

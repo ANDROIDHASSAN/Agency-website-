@@ -6,7 +6,7 @@
 
 ---
 
-**Project:** Xtract AI
+**Project:** Tech Mantrix AI
 **Generated:** 2026-02-05 23:30:23
 **Category:** SaaS (General)
 

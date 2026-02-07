@@ -8,47 +8,48 @@ const Testimonials: React.FC = () => {
   const DEFAULT_REVIEWS = [
     {
       name: "James Carter",
-      role: "CEO",
+      role: "Founder & CEO",
       company: "TechFlow Solutions",
-      content: "AI automation transformed our operations by eliminating repetitive tasks and improving efficiency. Scaling our workflow has never been easier!",
+      content: "Tech Mantrix didn't just build software; they engineered our entire growth infrastructure. A true strategic partner.",
       avatar: "https://picsum.photos/100/100?random=10"
     },
     {
       name: "Sophia Martinez",
-      role: "Ops Manager",
+      role: "COO",
       company: "NexaCorp",
-      content: "With Xtract, we cut manual work and improved accuracy. Our team now focuses on high-impact tasks while automation handles the rest!",
+      content: "The level of technical maturity and business acumen they brought to the table was refreshing. They speak our language.",
       avatar: "https://picsum.photos/100/100?random=11"
     },
     {
       name: "David Reynolds",
-      role: "Head of Sales",
+      role: "VP of Engineering",
       company: "GrowthPeak",
-      content: "AI-driven insights doubled our sales efficiency. We now engage leads at the right time with smarter, data-backed decisions!",
+      content: "We needed a team that could transparently integrate with our internal devs. Tech Mantrix delivered seamlessly.",
       avatar: "https://picsum.photos/100/100?random=12"
     },
     {
       name: "Emily Chen",
-      role: "Product Lead",
+      role: "Product Director",
       company: "InnovateX",
-      content: "The custom AI integrations were a game changer. We launched our product 3x faster than anticipated.",
+      content: "From MVP to Series A scaling, their architectural decisions have stood the test of time.",
       avatar: "https://picsum.photos/100/100?random=13"
     },
     {
       name: "Michael Ross",
-      role: "Director",
+      role: "Managing Director",
       company: "FutureScale",
-      content: "Incredible ROI. The automated customer support system reduced our ticket volume by 60% in the first month.",
+      content: "Professional, punctual, and precise. They removed the complexity from our digital transformation.",
       avatar: "https://picsum.photos/100/100?random=14"
     },
     {
       name: "Sarah Jenkins",
       role: "Founder",
       company: "StartUp Lab",
-      content: "Xtract's team is simply world-class. They understood our unique needs and delivered a solution that fits perfectly.",
+      content: "I've worked with many agencies. Tech Mantrix is the only one that felt like an extension of my own co-founding team.",
       avatar: "https://picsum.photos/100/100?random=15"
     }
   ];
+
 
   const reviews = DEFAULT_REVIEWS;
 
@@ -56,8 +57,9 @@ const Testimonials: React.FC = () => {
     <section className="py-24 px-6 bg-white/[0.01]">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-6xl font-bold mb-6">Loved by visionaries.</h2>
+          <h2 className="text-4xl md:text-6xl font-bold mb-6">Trusted by Industry Leaders.</h2>
           <div className="flex items-center justify-center gap-1">
+
             {[1, 2, 3, 4, 5].map((_, i) => (
               <Star key={i} className="w-5 h-5 text-amber-400 fill-amber-400" />
             ))}
@@ -65,8 +67,8 @@ const Testimonials: React.FC = () => {
         </div>
 
         <TestimonialsSection
-          title="Real Results, Real Growth"
-          description="Join hundreds of forward-thinking companies that have revolutionized their workflows with Xtract."
+          title="Real Results, Real Partners"
+          description="Join forward-thinking companies that have scaled efficiently with Tech Mantrix."
           testimonials={reviews.map(r => ({
             author: {
               name: r.name,

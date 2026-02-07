@@ -38,26 +38,27 @@ const FAQItem: React.FC<{ question: string; answer: string }> = ({ question, ans
 const FAQ: React.FC = () => {
   const DEFAULT_FAQS = [
     {
-      question: "How can AI automation help my business?",
-      answer: "AI automation streamlines repetitive tasks like data entry, scheduling, and lead generation, allowing your team to focus on high-value creative work. It typically saves businesses 15-25 hours per employee per week."
+      question: "How does Tech Mantrix differ from a standard development agency?",
+      answer: "We are a strategic growth partner, not just a dev shop. We align every line of code and every automation with your business KPIs, ensuring tangible ROI from week one."
     },
     {
-      question: "Is AI automation difficult to integrate?",
-      answer: "Not with Xtract. We handle the heavy lifting. Our platform integrates seamlessly with your existing tools like Slack, Gmail, CRM, and Discord within days, not months."
+      question: "What is your typical engagement timeline?",
+      answer: "We focus on long-term partnerships. Most engagements start with a 2-4 week discovery and strategy phase, followed by quarterly execution cycles to adapt to your market's speed."
     },
     {
-      question: "What industries can benefit from AI automation?",
-      answer: "Whether you're in e-commerce, healthcare, finance, or real estate, AI automation can optimize your operations. We tailor solutions to your specific industry needs."
+      question: "Do you work with non-technical founders?",
+      answer: "Exclusively. We handle the entire technical roadmap, translating your business vision into scalable infrastructure without burdening you with jargon."
     },
     {
-      question: "Do I need technical knowledge to use AI automation?",
-      answer: "No. While we provide advanced customization for developers, our main dashboard is built for business owners. If you can use an email client, you can use Xtract."
+      question: "How scalable are your automation solutions?",
+      answer: "Our architectures are built for enterprise-grade scale. Whether you handle 100 or 100,000 requests per day, our systems grow effortlessly with your demand."
     },
     {
-      question: "What kind of support do you offer?",
-      answer: "Starter plans include standard email support. Professional and Enterprise clients receive dedicated account managers, priority 24/7 slack support, and monthly strategy calls."
+      question: "What happens after the product launch?",
+      answer: "Launch is just day one. We provide ongoing optimization, feature expansion, and 24/7 monitoring to ensure your technology remains a competitive advantage."
     }
   ];
+
 
   const faqs = DEFAULT_FAQS;
 

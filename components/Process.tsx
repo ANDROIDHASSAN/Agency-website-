@@ -14,29 +14,31 @@ const Process: React.FC = () => {
   const DEFAULT_STEPS = [
     {
       id: "01",
-      title: "Discovery & Analysis",
-      desc: "We dive deep into your workflows to identify the biggest bottlenecks.",
+      title: "The Deep Dive",
+      desc: "We don't just take briefs; we interrogate reality. We uncover the core user addiction you need to build.",
       icon: <Search className="w-6 h-6" />
     },
     {
       id: "02",
-      title: "Strategy Design",
-      desc: "Our architects map out a custom AI integration path tailored to your goals.",
+      title: "The Blueprint",
+      desc: "Architecting the addiction. We design flows that keep users hooked and systems that scale infinitely.",
       icon: <Code2 className="w-6 h-6" />
     },
     {
       id: "03",
-      title: "Implementation",
-      desc: "We build and deploy the custom automation tools into your tech stack.",
+      title: "The Build",
+      desc: "Code as art. We build with obsessively clean code, ensuring your platform is fast, secure, and beautiful.",
       icon: <Layers className="w-6 h-6" />
     },
     {
       id: "04",
-      title: "Optimization",
-      desc: "Continuous monitoring and updates to ensure peak performance.",
+      title: "The Launch",
+      desc: "Go live and dominate. We support you as you scale, optimizing every specific metric for growth.",
       icon: <Rocket className="w-6 h-6" />
     }
   ];
+
+
 
   const steps = DEFAULT_STEPS;
 
@@ -85,18 +87,22 @@ const Process: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
           <div ref={leftContentRef}>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass border border-blue-500/20 mb-6">
-              <span className="text-xs font-bold text-teal-400 uppercase tracking-widest">Our Method</span>
+              <span className="text-xs font-bold text-blue-400 uppercase tracking-widest">How We Work</span>
             </div>
-            <h2 className="text-4xl md:text-6xl font-bold mb-8 leading-tight">Simple, Smart, and Highly Scalable.</h2>
+
+            <h2 className="text-4xl md:text-6xl font-bold mb-8 leading-tight">From Napkin Sketch to Market Dominance.</h2>
             <p className="text-white/60 text-lg mb-12">
-              Transforming your business shouldn't be complicated. We follow a proven four-step framework to ensure maximum ROI and minimum friction.
+              We cut the fluff. Our process is designed for speed, impact, and addiction. We turn your raw ideas into polished digital reality.
             </p>
+
+
             <ShimmerButton className="shadow-2xl">
               <span className="flex items-center gap-2 text-white">
-                Learn about our stack
+                See How We Build
                 <Rocket className="w-5 h-5" />
               </span>
             </ShimmerButton>
+
           </div>
 
           <div ref={stepsContainerRef} className="space-y-8">
@@ -112,7 +118,8 @@ const Process: React.FC = () => {
                       inactiveZone={0.01}
                       borderWidth={3}
                     />
-                    <div className="relative flex items-start gap-6 overflow-hidden rounded-xl border-[0.75px] border-white/10 bg-black/50 p-6 shadow-sm dark:shadow-[0px_0px_27px_0px_rgba(45,45,45,0.3)] backdrop-blur-md transition-all duration-300 hover:scale-[1.02] hover:border-blue-500/30 cursor-pointer group">
+                    <div className="glass-panel relative flex items-start gap-6 overflow-hidden p-6 hover:scale-[1.02] hover:border-blue-500/30 cursor-pointer group transition-all duration-300">
+
                       <div className="bg-white/5 w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 text-blue-400 font-bold transition-colors duration-300 group-hover:bg-blue-600/20 group-hover:text-blue-300">
                         {step.icon}
                       </div>

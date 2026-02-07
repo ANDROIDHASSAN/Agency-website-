@@ -6,7 +6,7 @@
 
 ---
 
-**Project:** Xtract AI Automation
+**Project:** Tech Mantrix AI Automation
 **Generated:** 2026-02-05 01:33:56
 **Category:** AI/Chatbot Platform
 

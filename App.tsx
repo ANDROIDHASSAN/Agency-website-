@@ -12,6 +12,8 @@ import Testimonials from './components/Testimonials';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import SmoothScroll from './components/SmoothScroll';
+import Contact from './components/Contact';
+
 
 
 const App: React.FC = () => {
@@ -23,11 +25,12 @@ const App: React.FC = () => {
 
   return (
     <SmoothScroll>
-      <div className="relative min-h-screen bg-black overflow-hidden selection:bg-indigo-500/30 selection:text-indigo-200">
+      <div className="relative min-h-screen bg-black overflow-hidden selection:bg-blue-500/30 selection:text-blue-200">
         {/* Immersive Background Effects */}
         <div className="fixed inset-0 pointer-events-none z-0">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[800px] opacity-20 mesh-bg" />
-          <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-indigo-600/10 blur-[120px] animate-pulse" />
+          <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-blue-600/10 blur-[120px] animate-pulse" />
+
           <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-emerald-600/10 blur-[120px] animate-pulse" />
         </div>
 
@@ -59,7 +62,9 @@ const App: React.FC = () => {
                 </section>
                 <Testimonials />
                 <FAQ />
+                <Contact />
               </main>
+
               <Footer />
             </motion.div>
           )}
