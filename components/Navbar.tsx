@@ -13,7 +13,7 @@ const Navbar: React.FC = () => {
     >
       <div className="w-full max-w-6xl glass-dark rounded-full px-6 py-3 flex items-center justify-between border border-white/10 shadow-2xl">
         <div className="flex items-center gap-2 group cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-          <div className="bg-indigo-600 p-2 rounded-lg group-hover:scale-110 transition-transform duration-200">
+          <div className="bg-blue-600 p-2 rounded-lg group-hover:scale-110 transition-transform duration-200">
             <Bot className="w-5 h-5 text-white" />
           </div>
           <span className="text-xl font-bold tracking-tighter text-white">TECH MANTRIX</span>
@@ -29,7 +29,7 @@ const Navbar: React.FC = () => {
             <a
               key={item.name}
               href={item.href}
-              className="hover:text-white transition-colors duration-200 cursor-pointer focus-visible:text-white focus-visible:outline-none"
+              className="hover:text-blue-400 transition-colors duration-200 cursor-pointer focus-visible:text-white focus-visible:outline-none"
             >
               {item.name}
             </a>
@@ -40,7 +40,7 @@ const Navbar: React.FC = () => {
           <button className="hidden sm:block text-sm font-medium text-white/70 hover:text-white transition-colors duration-200 cursor-pointer">
             Login
           </button>
-          <ShimmerButton className="text-sm font-bold shadow-lg hover:shadow-indigo-500/25 px-8">
+          <ShimmerButton className="text-sm font-bold shadow-lg hover:shadow-blue-500/25 px-8">
             Get Started
             <ChevronRight className="w-4 h-4 transition-transform duration-200 ml-2" />
           </ShimmerButton>

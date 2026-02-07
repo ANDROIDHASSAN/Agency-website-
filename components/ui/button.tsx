@@ -17,9 +17,7 @@ const buttonVariants = cva(
           after:absolute after:z-10 after:w-20 after:h-20 after:content[''] after:bg-rose-300 after:right-8 after:top-3 after:rounded-full after:blur-lg after:duration-500
           group-hover:after:duration-500 group-hover:after:-right-8
         `,
-                // Keeping a simpler variant just in case, or for secondary actions if needed later, 
-                // but user asked to use THIS style everywhere.
-                // For now, I'll make 'default' the requested style.
+                outline: "bg-transparent border border-white/10 hover:bg-white/5 hover:border-white/20 text-white shadow-none",
             },
             size: {
                 default: "h-16 w-64 p-3 text-base",

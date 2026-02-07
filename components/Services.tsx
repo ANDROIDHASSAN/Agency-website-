@@ -1,7 +1,6 @@
 
 import React, { useLayoutEffect, useRef } from 'react';
 import { GlowingEffect } from '@/components/ui/glowing-effect';
-import ChatCard from '@/components/ui/chat-card';
 import { BarChart3, Globe, Bot, Rocket, Megaphone, Smartphone } from 'lucide-react';
 import gsap from 'gsap';
 
@@ -58,28 +57,36 @@ const Services: React.FC = () => {
       });
 
       // Cards stagger animation
-      gsap.from('.service-card', {
-        opacity: 0,
-        y: 50,
-        duration: 0.8,
-        stagger: 0.2,
-        scrollTrigger: {
-          trigger: cardsRef.current,
-          start: 'top 80%',
-          toggleActions: 'play none none reverse'
+      // Cards stagger animation - using fromTo for stability
+      gsap.fromTo('.service-card',
+        {
+          opacity: 0,
+          y: 50
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          stagger: 0.2,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: cardsRef.current,
+            start: 'top 95%', // Trigger even earlier
+            toggleActions: 'play none none none'
+          }
         }
-      });
+      );
     }, containerRef);
 
     return () => ctx.revert();
   }, []);
 
   return (
-    <section ref={containerRef} className="py-20 px-6">
+    <section ref={containerRef} className="py-24 px-6">
       <div className="max-w-7xl mx-auto">
         <div ref={headerRef} className="mb-20 text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass border border-white/10 mb-6">
-            <span className="text-xs font-bold text-indigo-400 uppercase tracking-widest">Our Expertise</span>
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass border border-blue-500/20 mb-6">
+            <span className="text-xs font-bold text-blue-400 uppercase tracking-widest">Our Expertise</span>
           </div>
           <h2 className="text-4xl md:text-6xl font-bold mb-6">Comprehensive Digital Solutions</h2>
           <p className="text-white/60 text-lg max-w-2xl mx-auto">
@@ -89,8 +96,8 @@ const Services: React.FC = () => {
 
         <ul ref={cardsRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, i) => (
-            <li key={i} className="service-card list-none relative h-full">
-              <div className="relative h-full rounded-[2rem] border-[0.75px] border-white/10 p-2 md:p-3">
+            <li key={i} className="service-card list-none relative h-full group">
+              <div className="relative h-full rounded-[2rem] border-[0.75px] border-white/10 p-2 md:p-3 transition-transform duration-300 hover:scale-[1.02] cursor-pointer">
                 <GlowingEffect
                   spread={40}
                   glow={true}
@@ -99,9 +106,9 @@ const Services: React.FC = () => {
                   inactiveZone={0.01}
                   borderWidth={3}
                 />
-                <div className="relative flex h-full flex-col justify-between overflow-hidden rounded-[1.5rem] border-[0.75px] border-white/10 bg-black/50 p-6 md:p-8 shadow-sm dark:shadow-[0px_0px_27px_0px_rgba(45,45,45,0.3)] backdrop-blur-md">
+                <div className="relative flex h-full flex-col justify-between overflow-hidden rounded-[1.5rem] border-[0.75px] border-white/10 bg-black/50 p-6 md:p-8 shadow-sm dark:shadow-[0px_0px_27px_0px_rgba(45,45,45,0.3)] backdrop-blur-md transition-colors duration-300 group-hover:border-blue-500/30">
 
-                  <div className={`mb-8 ${service.title === "AI Automation" ? "w-full" : "p-4 bg-white/5 rounded-2xl inline-block w-fit"}`}>
+                  <div className={`mb-8 ${service.title === "AI Automation" ? "w-full" : "p-4 bg-white/5 rounded-2xl inline-block w-fit group-hover:bg-blue-600/20 transition-colors duration-300"}`}>
                     {service.icon}
                   </div>
 

@@ -53,7 +53,7 @@ const Testimonials: React.FC = () => {
   const reviews = DEFAULT_REVIEWS;
 
   return (
-    <section className="py-32 px-6 bg-white/[0.01]">
+    <section className="py-24 px-6 bg-white/[0.01]">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-6xl font-bold mb-6">Loved by visionaries.</h2>

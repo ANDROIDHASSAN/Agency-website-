@@ -33,7 +33,7 @@ const Pricing: React.FC = () => {
   const plans = DEFAULT_PLANS;
 
   return (
-    <section className="py-32 px-6">
+    <section className="py-24 px-6">
       <div className="max-w-6xl mx-auto text-center">
         <div className="mb-20">
           <h2 className="text-4xl md:text-6xl font-bold mb-8">Pricing for growth.</h2>
@@ -45,10 +45,10 @@ const Pricing: React.FC = () => {
             >
               <motion.div
                 animate={{ x: isAnnual ? 28 : 0 }}
-                className="w-5 h-5 bg-primary rounded-full shadow-lg"
+                className="w-5 h-5 bg-blue-600 rounded-full shadow-lg"
               />
             </button>
-            <span className={`text-sm font-medium ${isAnnual ? 'text-white' : 'text-white/40'}`}>Annually <span className="text-secondary text-[10px] ml-1">SAVE 25%</span></span>
+            <span className={`text-sm font-medium ${isAnnual ? 'text-white' : 'text-white/40'}`}>Annually <span className="text-emerald-400 text-[10px] ml-1">SAVE 25%</span></span>
           </div>
         </div>
 
@@ -58,7 +58,7 @@ const Pricing: React.FC = () => {
               key={i}
               className="list-none relative h-full"
             >
-              <div className={`relative h-full rounded-[2.1rem] md:rounded-[2.1rem] border-[0.75px] ${plan.isPopular ? 'border-indigo-500/50' : 'border-white/10'} p-2`}>
+              <div className={`relative h-full rounded-[2.1rem] md:rounded-[2.1rem] border-[0.75px] ${plan.isPopular ? 'border-blue-500/50' : 'border-white/10'} p-2 transition-transform duration-300 hover:scale-[1.02] cursor-pointer group`}>
                 <GlowingEffect
                   spread={40}
                   glow={true}
@@ -68,9 +68,9 @@ const Pricing: React.FC = () => {
                   borderWidth={3}
                   variant={plan.isPopular ? "default" : "default"}
                 />
-                <div className={`relative flex flex-col h-full overflow-hidden rounded-[1.5rem] border-[0.75px] ${plan.isPopular ? 'border-primary/20 bg-primary/10' : 'border-white/10 bg-black/50'} p-8 shadow-sm dark:shadow-[0px_0px_27px_0px_rgba(45,45,45,0.3)] backdrop-blur-md pt-12`}>
+                <div className={`relative flex flex-col h-full overflow-hidden rounded-[1.5rem] border-[0.75px] ${plan.isPopular ? 'border-blue-500/20 bg-blue-500/10' : 'border-white/10 bg-black/50 group-hover:border-white/20'} p-8 shadow-sm dark:shadow-[0px_0px_27px_0px_rgba(45,45,45,0.3)] backdrop-blur-md pt-12 transition-colors duration-300`}>
                   {plan.isPopular && (
-                    <div className="absolute top-0 left-0 right-0 bg-primary text-white text-[10px] font-bold py-1.5 text-center uppercase tracking-widest z-10">
+                    <div className="absolute top-0 left-0 right-0 bg-blue-600 text-white text-[10px] font-bold py-1.5 text-center uppercase tracking-widest z-10 tier-popular">
                       Most Popular
                     </div>
                   )}

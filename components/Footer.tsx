@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
           <div className="md:col-span-1">
             <div className="flex items-center gap-2 mb-6">
-              <div className="bg-indigo-600 p-2 rounded-lg">
+              <div className="bg-blue-600 p-2 rounded-lg">
                 <Bot className="w-5 h-5 text-white" />
               </div>
               <span className="text-xl font-bold tracking-tighter text-white">TECH MANTRIX</span>
@@ -21,20 +21,20 @@ const Footer: React.FC = () => {
               Scale Your Business with Intelligent Automation and comprehensive digital strategies.
             </p>
             <div className="flex gap-4">
-              <Instagram className="w-5 h-5 text-white/40 hover:text-white cursor-pointer transition-colors" />
-              <Twitter className="w-5 h-5 text-white/40 hover:text-white cursor-pointer transition-colors" />
-              <Linkedin className="w-5 h-5 text-white/40 hover:text-white cursor-pointer transition-colors" />
-              <Github className="w-5 h-5 text-white/40 hover:text-white cursor-pointer transition-colors" />
+              <Instagram className="w-5 h-5 text-white/40 hover:text-blue-400 cursor-pointer transition-colors" />
+              <Twitter className="w-5 h-5 text-white/40 hover:text-blue-400 cursor-pointer transition-colors" />
+              <Linkedin className="w-5 h-5 text-white/40 hover:text-blue-400 cursor-pointer transition-colors" />
+              <Github className="w-5 h-5 text-white/40 hover:text-blue-400 cursor-pointer transition-colors" />
             </div>
           </div>
 
           <div>
             <h4 className="text-sm font-bold uppercase tracking-widest mb-6">Capabilities</h4>
             <ul className="space-y-4 text-sm text-white/40">
-              <li className="hover:text-white cursor-pointer transition-colors">Digital Marketing</li>
-              <li className="hover:text-white cursor-pointer transition-colors">Web Development</li>
-              <li className="hover:text-white cursor-pointer transition-colors">AI Automation</li>
-              <li className="hover:text-white cursor-pointer transition-colors">Product Development</li>
+              <li className="hover:text-blue-400 cursor-pointer transition-colors">Digital Marketing</li>
+              <li className="hover:text-blue-400 cursor-pointer transition-colors">Web Development</li>
+              <li className="hover:text-blue-400 cursor-pointer transition-colors">AI Automation</li>
+              <li className="hover:text-blue-400 cursor-pointer transition-colors">Product Development</li>
             </ul>
           </div>
 

@@ -43,17 +43,17 @@ const Hero: React.FC = () => {
       <div className="max-w-6xl mx-auto text-center relative z-10">
         <div
           ref={badgeRef}
-          className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-10 cursor-default"
+          className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 mb-10 cursor-default"
         >
-          <span className="bg-primary text-[10px] uppercase font-bold px-2 py-0.5 rounded-full text-white">Agency</span>
-          <span className="text-xs font-medium text-primary-light">Powering Next-Gen Growth</span>
+          <span className="bg-blue-600 text-[10px] uppercase font-bold px-2 py-0.5 rounded-full text-white">Agency</span>
+          <span className="text-xs font-medium text-blue-300">Powering Next-Gen Growth</span>
         </div>
 
         <h1
           ref={titleRef}
           className="text-5xl md:text-8xl font-bold tracking-tight mb-10 leading-[1.1] text-white"
         >
-          Scale Your Business with <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-light via-indigo-400 to-emerald-400">Intelligent Automation</span>
+          Scale Your Business with <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 animate-pulse">Intelligent Automation</span>
         </h1>
 
         <p
@@ -85,7 +85,7 @@ const Hero: React.FC = () => {
           ref={buttonsRef}
           className="flex flex-col sm:flex-row items-center justify-center gap-6"
         >
-          <ShimmerButton className="shadow-2xl">
+          <ShimmerButton className="shadow-2xl hover:scale-105 transition-all duration-300">
             <span className="flex items-center gap-2 text-white font-bold">
               Get Started Now
               <ArrowRight className="w-5 h-5" />
@@ -95,7 +95,7 @@ const Hero: React.FC = () => {
           <Button
             variant="default"
             size="auto"
-            className="text-white/60 hover:text-white hover:bg-white/5 px-8 h-[52px] rounded-full font-bold transition-all border border-white/5"
+            className="text-white/60 hover:text-white hover:bg-white/5 px-8 h-[52px] rounded-full font-bold transition-all border border-white/5 hover:border-blue-500/30 hover:shadow-[0_0_20px_rgba(30,64,175,0.3)] duration-300"
           >
             Watch Demo
           </Button>
@@ -105,15 +105,15 @@ const Hero: React.FC = () => {
           ref={pillsRef}
           className="mt-20 flex flex-wrap justify-center gap-4 md:gap-8"
         >
-          <div className="pill flex items-center gap-2 px-4 py-2 rounded-full glass border border-white/5">
+          <div className="pill flex items-center gap-2 px-4 py-2 rounded-full glass border border-white/5 hover:border-blue-400/30 transition-colors duration-300 cursor-default">
             <Zap className="w-4 h-4 text-amber-400" />
             <span className="text-xs font-semibold text-white/50">Lightning Fast</span>
           </div>
-          <div className="pill flex items-center gap-2 px-4 py-2 rounded-full glass border border-white/5">
+          <div className="pill flex items-center gap-2 px-4 py-2 rounded-full glass border border-white/5 hover:border-purple-400/30 transition-colors duration-300 cursor-default">
             <Sparkles className="w-4 h-4 text-purple-400" />
             <span className="text-xs font-semibold text-white/50">AI Powered</span>
           </div>
-          <div className="pill flex items-center gap-2 px-4 py-2 rounded-full glass border border-white/5">
+          <div className="pill flex items-center gap-2 px-4 py-2 rounded-full glass border border-white/5 hover:border-emerald-400/30 transition-colors duration-300 cursor-default">
             <ShieldCheck className="w-4 h-4 text-emerald-400" />
             <span className="text-xs font-semibold text-white/50">Enterprise Secure</span>
           </div>
