@@ -20,10 +20,10 @@ const Hero: React.FC = () => {
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ defaults: { ease: 'power3.out', duration: 1 } });
 
-      tl.from(badgeRef.current, { opacity: 0, scale: 0.9, y: 20, duration: 0.8 }, 0.2)
-        .from(titleRef.current, { opacity: 0, y: 40, duration: 1 }, 0.3)
-        .from(descriptionRef.current, { opacity: 0, y: 30, duration: 0.8 }, 0.5)
-        .from(buttonsRef.current, { opacity: 0, y: 20, duration: 0.8 }, 0.7);
+      tl.fromTo(badgeRef.current, { opacity: 0, scale: 0.9, y: 20 }, { opacity: 1, scale: 1, y: 0, duration: 0.8 }, 0.2)
+        .fromTo(titleRef.current, { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 1 }, 0.3)
+        .fromTo(descriptionRef.current, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.8 }, 0.5)
+        .fromTo(buttonsRef.current, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.8 }, 0.7);
 
 
     }, containerRef);

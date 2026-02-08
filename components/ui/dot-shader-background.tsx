@@ -145,13 +145,17 @@ function Scene() {
     const dotMaterial = useMemo(() => new DotMaterial(), [])
 
     useEffect(() => {
+        if (!dotMaterial.uniforms) return;
+
         // @ts-ignore
-        dotMaterial.uniforms.dotColor.value.setHex(themeColors.dotColor.replace('#', '0x'))
+        if (dotMaterial.uniforms.dotColor) dotMaterial.uniforms.dotColor.value.setHex(themeColors.dotColor.replace('#', '0x'))
         // @ts-ignore
-        dotMaterial.uniforms.bgColor.value.setHex(themeColors.bgColor.replace('#', '0x'))
+        if (dotMaterial.uniforms.bgColor) dotMaterial.uniforms.bgColor.value.setHex(themeColors.bgColor.replace('#', '0x'))
         // @ts-ignore
-        dotMaterial.uniforms.dotOpacity.value = themeColors.dotOpacity
-    }, [theme, dotMaterial, themeColors])
+        if (dotMaterial.uniforms.dotOpacity) dotMaterial.uniforms.dotOpacity.value = themeColors.dotOpacity
+        // @ts-ignore
+        if (dotMaterial.uniforms.resolution) dotMaterial.uniforms.resolution.value.set(size.width * viewport.dpr, size.height * viewport.dpr)
+    }, [theme, dotMaterial, themeColors, size, viewport])
 
     useFrame((state) => {
         // @ts-ignore
@@ -191,6 +195,7 @@ export const DotScreenShader = ({ className }: DotScreenShaderProps) => {
     return (
         <Canvas
             className={`!absolute inset-0 z-[-1] ${className}`}
+            dpr={[1, 2]}
             gl={{
                 antialias: true,
                 powerPreference: 'high-performance',

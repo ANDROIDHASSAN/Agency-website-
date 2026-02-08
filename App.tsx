@@ -25,7 +25,7 @@ const App: React.FC = () => {
 
   return (
     <SmoothScroll>
-      <div className="relative min-h-screen bg-black overflow-hidden selection:bg-blue-500/30 selection:text-blue-200">
+      <div className="relative min-h-screen bg-black selection:bg-blue-500/30 selection:text-blue-200">
         {/* Immersive Background Effects */}
         <div className="fixed inset-0 pointer-events-none z-0">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[800px] opacity-20 mesh-bg" />

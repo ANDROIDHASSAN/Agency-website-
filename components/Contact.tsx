@@ -93,19 +93,19 @@ const Contact: React.FC = () => {
                             <div className="bg-white/5 p-3 rounded-lg border border-white/10">
                                 <Mail className="w-5 h-5" />
                             </div>
-                            <span>hello@techmantrix.com</span>
+                            <span>techmantrix@gmail.com</span>
                         </div>
                         <div className="flex items-center gap-4 text-white/60 hover:text-white transition-colors">
                             <div className="bg-white/5 p-3 rounded-lg border border-white/10">
                                 <Phone className="w-5 h-5" />
                             </div>
-                            <span>+1 (555) 123-4567</span>
+                            <span>+91 9716978692</span>
                         </div>
                         <div className="flex items-center gap-4 text-white/60 hover:text-white transition-colors">
                             <div className="bg-white/5 p-3 rounded-lg border border-white/10">
                                 <MapPin className="w-5 h-5" />
                             </div>
-                            <span>San Francisco, CA</span>
+                            <span>Nashik,Mh,India</span>
                         </div>
                     </div>
                 </div>

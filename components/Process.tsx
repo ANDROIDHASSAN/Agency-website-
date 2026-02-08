@@ -45,16 +45,22 @@ const Process: React.FC = () => {
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       // Left side content animation
-      gsap.from(leftContentRef.current, {
-        opacity: 0,
-        x: -50,
-        duration: 1,
-        scrollTrigger: {
-          trigger: leftContentRef.current,
-          start: 'top 80%',
-          toggleActions: 'play none none reverse'
+      gsap.fromTo(leftContentRef.current,
+        {
+          opacity: 0,
+          x: -50
+        },
+        {
+          scrollTrigger: {
+            trigger: leftContentRef.current,
+            start: 'top 80%',
+            toggleActions: 'play none none none'
+          },
+          opacity: 1,
+          x: 0,
+          duration: 1
         }
-      });
+      );
 
       // Steps stagger animation
       // Steps stagger animation

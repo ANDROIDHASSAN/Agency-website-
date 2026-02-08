@@ -40,31 +40,43 @@ const Services: React.FC = () => {
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       // Header animation
-      gsap.from(headerRef.current, {
-        scrollTrigger: {
-          trigger: headerRef.current,
-          start: 'top 85%',
-          toggleActions: 'play none none reverse'
+      gsap.fromTo(headerRef.current,
+        {
+          opacity: 0,
+          y: 40
         },
-        opacity: 0,
-        y: 40,
-        duration: 0.8,
-        ease: 'power3.out'
-      });
+        {
+          scrollTrigger: {
+            trigger: headerRef.current,
+            start: 'top 85%',
+            toggleActions: 'play none none none'
+          },
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: 'power3.out'
+        }
+      );
 
       // Cards stagger animation
-      gsap.from('.service-card', {
-        scrollTrigger: {
-          trigger: cardsRef.current,
-          start: 'top 85%',
-          toggleActions: 'play none none reverse'
+      gsap.fromTo('.service-card',
+        {
+          opacity: 0,
+          y: 40
         },
-        opacity: 0,
-        y: 40,
-        duration: 0.8,
-        stagger: 0.1,
-        ease: 'power3.out'
-      });
+        {
+          scrollTrigger: {
+            trigger: cardsRef.current,
+            start: 'top 85%',
+            toggleActions: 'play none none none'
+          },
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          stagger: 0.1,
+          ease: 'power3.out'
+        }
+      );
     }, containerRef);
 
     return () => ctx.revert();

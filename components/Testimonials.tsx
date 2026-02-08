@@ -11,7 +11,7 @@ const Testimonials: React.FC = () => {
       role: "Founder & CEO",
       company: "TechFlow Solutions",
       content: "Tech Mantrix didn't just build software; they engineered our entire growth infrastructure. A true strategic partner.",
-      avatar: "https://picsum.photos/100/100?random=10"
+      avatar: "/images/testimonials/man1.jpeg"
     },
     {
       name: "Sophia Martinez",
@@ -25,7 +25,7 @@ const Testimonials: React.FC = () => {
       role: "VP of Engineering",
       company: "GrowthPeak",
       content: "We needed a team that could transparently integrate with our internal devs. Tech Mantrix delivered seamlessly.",
-      avatar: "https://picsum.photos/100/100?random=12"
+      avatar: "/images/testimonials/man2.jpeg"
     },
     {
       name: "Emily Chen",
@@ -39,14 +39,14 @@ const Testimonials: React.FC = () => {
       role: "Managing Director",
       company: "FutureScale",
       content: "Professional, punctual, and precise. They removed the complexity from our digital transformation.",
-      avatar: "https://picsum.photos/100/100?random=14"
+      avatar: "/images/testimonials/man3.jpeg"
     },
     {
       name: "Sarah Jenkins",
       role: "Founder",
       company: "StartUp Lab",
       content: "I've worked with many agencies. Tech Mantrix is the only one that felt like an extension of my own co-founding team.",
-      avatar: "https://picsum.photos/100/100?random=15"
+      avatar: "/images/testimonials/women1.jpeg"
     }
   ];
 
